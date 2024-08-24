@@ -25,10 +25,39 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <DashboardLayout />,
+        children: [
+           {
+            path: 'add-job',
+            element: <AddJob />,
+          },
+           {
+            path: 'admin',
+            element: <Admin />,
+          },
+          {
+            path: 'all-job',
+            element: <AllJob />,
+          },
+          {
+            path: 'delete-job',
+            element: <DeleteJob />,
+          },
+          {
+            path: 'edit-job',
+            element: <EditJob />,
+          },
+          {
+            path: 'stats',
+            element: <Stats />,
+          },
+          {
+            path: 'profile',
+            element: <Profile />,
+          },
+        ]
       },
     ]
-  },
-   
+  }, 
 ])
 
 
