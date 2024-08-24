@@ -15,7 +15,7 @@ const Register = () => {
         <FromRow type="password" name="password" placeholder="secret123" />
         <button type="submit" className="btn btn-block">submit</button>
         <p>
-          Already a member? <Link to='login'>login</Link>
+          Already a member? <Link to='/login' className="member-btn">Login</Link>
         </p>
       </form>
     </Wrapper>
