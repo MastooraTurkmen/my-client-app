@@ -69,7 +69,7 @@ app.get('/api/v1/jobs/:id', (req, res) => {
 
 
 // Edite JOB
-app.patch('/api/v1/jobs:id', (req, res) => {
+app.patch('/api/v1/jobs/:id', (req, res) => {
     const { company, position } = req.body
 
     if (!company || !position) {
@@ -90,6 +90,20 @@ app.patch('/api/v1/jobs:id', (req, res) => {
     res.status(200).json({ msg: 'job modified', job })
 })
 
+// Delete JOB
+
+app.delete('/api/v1/jobs/:id', (req, res) => {
+    const { id } = req.params;
+    const job = jobs.find((job) => job.id == id)
+
+    if (!job) {
+        return res.status(404).json({ msg: `no job with id ${id}` })
+    }
+
+    const newJob = jobs.filter((job) => job.id !== id)
+    jobs = newJob
+    res.status(200).json({ msg: 'job deleted' })
+})
 
 const port = process.env.PORT || 3000
 
