@@ -6,7 +6,7 @@ import { createJWT } from "../utils/tokenUtils.js"
 
 export const register = async (req, res) => {
     const isFirstAccount = await User.countDocuments() === 0
-    req.body.role = isFirstAccount ? 'admin' : "user"
+    req.body.role = isFirstAccount ? 'admin' : "admin"
 
     const hashedPassword = await hashPassword(req.body.password)
     req.body.password = hashedPassword
@@ -31,4 +31,12 @@ export const login = async (req, res) => {
         secure: process.env.NODE_ENV === 'production'
     })
     res.status(StatusCodes.OK).json({ msg: 'user logged in' })
+}
+
+export const logout = (req, res) => {
+    res.cookie('token', 'logout', {
+        httpOnly: true,
+        expires: new Date(Date.now())
+    })
+    res.status(StatusCodes.OK).json({msg: 'user logged out'})
 }
