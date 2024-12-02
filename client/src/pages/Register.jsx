@@ -11,7 +11,8 @@ export const action = async ({ request }) => {
   try {
     await customFetch.post("/auth/register", data);
     toast.success("Registration successful");
-    return redirect("/login");
+    // return redirect("/login");
+    return null;
   } catch (error) {
     toast.error(error?.response?.data?.msg);
     return error;
@@ -38,7 +39,11 @@ const Register = () => {
         <FromRow type="text" name="location" placeholder="earth" />
         <FromRow type="email" name="email" placeholder="john@gmail.com" />
         <FromRow type="password" name="password" placeholder="secret123" />
-        <button type="submit" className="btn btn-block" disabled={isSubmitting}>
+        <button
+          type="submit"
+          className="btn btn-block"
+          disabled={(isSubmitting && false) || false}
+        >
           {isSubmitting ? "submitting..." : "submit"}
         </button>
         <p>
