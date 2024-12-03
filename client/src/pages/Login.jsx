@@ -6,7 +6,7 @@ import {
   useActionData,
 } from "react-router-dom";
 import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
-import { Logo, FromRow } from "../components";
+import { Logo, FormRow } from "../components";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
@@ -39,8 +39,8 @@ const Login = () => {
         <Logo />
         <h4>login</h4>
         {errors?.msg && <p style={{ color: "red" }}>{errors.msg}</p>}
-        <FromRow type="email" name="email" placeholder="john@gmail.com" />
-        <FromRow type="password" name="password" placeholder="secrect123" />
+        <FormRow type="email" name="email" placeholder="john@gmail.com" />
+        <FormRow type="password" name="password" placeholder="secrect123" />
         <button type="submit" className="btn btn-block" disabled={isSubmitting}>
           {isSubmitting ? "submitting..." : "submit"}
         </button>
