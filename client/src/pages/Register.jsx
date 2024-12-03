@@ -1,6 +1,6 @@
 import { Link, redirect, useNavigation, Form } from "react-router-dom";
 import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
-import { Logo, FromRow } from "../components";
+import { Logo, FormRow } from "../components";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
@@ -29,16 +29,16 @@ const Register = () => {
       <Form method="post" className="form">
         <Logo />
         <h4>Register</h4>
-        <FromRow type="text" name="name" placeholder="john" />
-        <FromRow
+        <FormRow type="text" name="name" placeholder="john" />
+        <FormRow
           type="text"
           name="lastName"
           labelText="Last Name"
           placeholder="smith"
         />
-        <FromRow type="text" name="location" placeholder="earth" />
-        <FromRow type="email" name="email" placeholder="john@gmail.com" />
-        <FromRow type="password" name="password" placeholder="secret123" />
+        <FormRow type="text" name="location" placeholder="earth" />
+        <FormRow type="email" name="email" placeholder="john@gmail.com" />
+        <FormRow type="password" name="password" placeholder="secret123" />
         <button
           type="submit"
           className="btn btn-block"
