@@ -4,7 +4,7 @@ import { JOB_STATUS1, JOB_TYPE1 } from "../../../utils/constants";
 import { Form, useNavigation, redirect } from "react-router-dom";
 import { toast } from "react-toastify";
 import customFetch from "../utils/customFetch";
-import { FromRow, FormRowSelect } from "../components";
+import { FormRow, FormRowSelect } from "../components";
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
@@ -12,7 +12,7 @@ export const action = async ({ request }) => {
   try {
     await customFetch.post("/jobs", data);
     toast.success("job successfully added");
-    return redirect('all-jobs');
+    return redirect("all-jobs");
   } catch (error) {
     toast.error(error?.response?.data?.msg);
     return error;
@@ -28,9 +28,9 @@ const AddJob = () => {
       <Form method="post" className="form">
         <h4 className="form-title">add job</h4>
         <div className="form-center">
-          <FromRow type="text" name="position" />
-          <FromRow type="text" name="company" />
-          <FromRow
+          <FormRow type="text" name="position" />
+          <FormRow type="text" name="company" />
+          <FormRow
             type="text"
             labelText="job location"
             name="jobLocation"
