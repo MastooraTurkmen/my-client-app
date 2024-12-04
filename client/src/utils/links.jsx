@@ -8,7 +8,7 @@ import React from "react";
 const links = [
   {
     text: "add job",
-    path: "/dashboard",
+    path: "/dashboard/add-job",
     icon: <FaWpforms />,
   },
   {
