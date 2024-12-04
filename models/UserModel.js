@@ -15,8 +15,10 @@ const UserSchema = new mongoose.Schema({
     role: {
         type: String,
         enum: ['user', 'admin'],
-        default: 'user'
-    }
+        default: 'admin'
+    },
+    avatar: String,
+    avatarPublicId: String,
 })
 
 UserSchema.methods.toJSON = function () {
@@ -24,5 +26,4 @@ UserSchema.methods.toJSON = function () {
     delete obj.password
     return obj
 }
-
 export default mongoose.model('User', UserSchema)
