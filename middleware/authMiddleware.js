@@ -16,9 +16,9 @@ export const authenticateUser = async (req, res, next) => {
 
 export const authorizedPermissions = (...roles) => {
     return (req, res, next) => {
-        if (!roles.includes(req.user.role)) {
-            throw new Unauthorized('Unauthorized to access to this route')
-        }
+        // if (!roles.includes(req.user.role)) {
+        //     throw new Unauthorized('Unauthorized to access to this route')
+        // }
         next();
     }
 }
