@@ -30,7 +30,7 @@ const Job = ({
           <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
           <JobInfo icon={<FaCalendarAlt />} text={date} />
           <JobInfo icon={<FaBriefcase />} text={jobType} />
-          <div className={`state ${jobStatus}`}>{jobStatus}</div>
+          <div className={`status ${jobStatus}`}>{jobStatus}</div>
         </div>
         <footer className="actions">
           <Link to={`../edit-job/${_id}`} className="btn edit-btn">
@@ -38,7 +38,7 @@ const Job = ({
           </Link>
           <Form method="post" action={`../delete-job/${_id}`}>
             <button type="submit" className="btn delete-btn">
-              delete
+              Delete
             </button>
           </Form>
         </footer>
@@ -46,5 +46,4 @@ const Job = ({
     </Wrapper>
   );
 };
-
 export default Job;
