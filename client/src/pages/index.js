@@ -1,7 +1,7 @@
 export { default as DashboardLayout } from './DashboardLayout';
 export { default as Admin } from './Admin';
 export { default as AddJob } from './AddJob';
-export { default as AllJob } from './AllJob';
+export { default as AllJobs } from './AllJobs';
 export { default as EditJob } from './EditJob';
 export { default as Profile } from './Profile';
 export { default as Landing } from './Landing';
