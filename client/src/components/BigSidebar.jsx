@@ -1,16 +1,16 @@
 import Wrapper from "../assets/wrappers/BigSidebar";
-import { userDashboardContext } from "../pages/DashboardLayout";
-import Logo from "./Logo";
 import NavLinks from "./NavLinks";
+import Logo from "./Logo";
+import { useDashboardContext } from "../pages/DashboardLayout";
 
 const BigSidebar = () => {
-  const { showSidebar } = userDashboardContext();
+  const { showSidebar } = useDashboardContext();
 
   return (
     <Wrapper>
       <div
         className={
-          showSidebar ? "sidebar-container show-sidebar" : "sidebar-container"
+          showSidebar ? "sidebar-container " : "sidebar-container show-sidebar"
         }
       >
         <div className="content">
