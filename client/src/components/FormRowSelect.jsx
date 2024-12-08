@@ -17,10 +17,10 @@ const FormRowSelect = ({
         defaultValue={defaultValue}
         onChange={onChange}
       >
-        {list.map((jobValue) => {
+        {list.map((itemValue) => {
           return (
-            <option key={jobValue} value={jobValue}>
-              {jobValue}
+            <option key={itemValue} value={itemValue}>
+              {itemValue}
             </option>
           );
         })}
@@ -28,5 +28,4 @@ const FormRowSelect = ({
     </div>
   );
 };
-
 export default FormRowSelect;
