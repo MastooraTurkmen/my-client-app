@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   AddJob,
   Admin,
-  AllJob,
+  AllJobs,
   DashboardLayout,
   Profile,
   Register,
@@ -18,7 +18,7 @@ import { action as registerAction } from "./pages/Register";
 import { action as loginAction } from "./pages/Login";
 import { loader as dashboardLoader } from "./pages/DashboardLayout";
 import { action as addJobAction } from "./pages/AddJob";
-import { loader as allJobsLoader } from "./pages/AllJob";
+import { loader as allJobsLoader } from "./pages/AllJobs";
 import { loader as editJobLoader } from "./pages/EditJob";
 import { action as editJobAction } from "./pages/EditJob";
 import { action as deleteJobAction } from "./pages/DeleteJob";
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
           },
           {
             path: "all-jobs",
-            element: <AllJob />,
+            element: <AllJobs />,
             loader: allJobsLoader,
           },
           {
