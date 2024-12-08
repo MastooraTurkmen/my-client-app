@@ -1,12 +1,11 @@
-import Wrapper from "../assets/wrappers/ThemeToggle";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
-import { userDashboardContext } from "../pages/DashboardLayout";
+import Wrapper from "../assets/wrappers/ThemeToggle";
+import { useDashboardContext } from "../pages/DashboardLayout";
 
 const ThemeToggle = () => {
-  const { isDarkTheme, toggleDarkTheme } = userDashboardContext();
-
+  const { isDarkTheme, toggleDarkTheme } = useDashboardContext();
   return (
-    <Wrapper>
+    <Wrapper onClick={toggleDarkTheme}>
       {isDarkTheme ? (
         <BsFillSunFill className="toggle-icon" />
       ) : (
@@ -15,5 +14,4 @@ const ThemeToggle = () => {
     </Wrapper>
   );
 };
-
 export default ThemeToggle;
