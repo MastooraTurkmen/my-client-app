@@ -2,7 +2,7 @@
 
 🌐[Live Link](https://jobify-app-3edf.onrender.com/)
 
-### 📌 Description:
+#### 📌 Description:
 
 JOBIFY is a full-stack MERN project designed to simplify job tracking and management for users. The application integrates a React-powered frontend, a Node.js backend, and MongoDB as the database for robust and efficient data storage.
 
@@ -29,7 +29,7 @@ JOBIFY is a full-stack MERN project designed to simplify job tracking and manage
 
 ---
 
-### 📸 Features
+## 📸 Features
 
 1. ✅ User Authentication:
 
@@ -79,7 +79,8 @@ This command uses the setup-production-app package, which helps configure and op
 node server
 ```
 
-**Setup MongoDb URL and CLoudinary**
+### **Setup MongoDb URL and CLoudinary**
+
 To ensure the application runs correctly, you need to configure the necessary environment variables for database connectivity and media management.
 
 **1. Create a `.env` File:**
@@ -156,6 +157,6 @@ git push origin feature-name
 
 ### 📬 Contact
 
-💻 **Developer**: Mastoora Turkmen
-📧 **Email**: mastooraturkmen@gmail.com
-🌟 If you like this project, please give it a ⭐ on [GitHub](https://github.com/MastooraTurkmen/my-client-app)!
+- 💻 **Developer**: Mastoora Turkmen
+- 📧 **Email**: mastooraturkmen@gmail.com
+- 🌟 If you like this project, please give it a ⭐ on [GitHub](https://github.com/MastooraTurkmen/my-client-app)!
