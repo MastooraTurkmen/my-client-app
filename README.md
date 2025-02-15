@@ -1,7 +1,5 @@
 # 🌟 JOBIFY Website 🌟
 
-🌐[Live Link](https://jobify-app-3edf.onrender.com/)
-
 #### 📌 Description:
 
 JOBIFY is a full-stack MERN project designed to simplify job tracking and management for users. The application integrates a React-powered frontend, a Node.js backend, and MongoDB as the database for robust and efficient data storage.
@@ -121,12 +119,6 @@ To ensure the application runs correctly, you need to configure the necessary en
 - `MONGO_URL`: Connects your application to the database for storing and retrieving data.
 - `JWT_SECRET`: Secures JSON Web Tokens (JWT) for user authentication.
 - `CLOUD_NAME`, `CLOUD_API_KEY`, `CLOUD_API_SECRET`: Enables Cloudinary to manage image uploads and transformations.
-
----
-
-### ✨ Live Demo
-
-🔗 [Visit the Jobify Website](https://jobify-app-3edf.onrender.com/)
 
 ---
 
